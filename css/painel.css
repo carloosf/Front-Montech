@@ -1,0 +1,250 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import "/css/cores.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--cor-secundaria);
+  position: relative;
+}
+
+.sidebar {
+  position: absolute;
+  box-shadow: 0px 0px 4px 1px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: var(--cor-primaria);
+  display: grid;
+  grid-template-rows: 100px 1fr;
+  /* Important */
+  z-index: 999;
+  width: 0px;
+  overflow: hidden;
+  transition: width 0.8s;
+}
+
+#close {
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.logo-menu {
+  width: 55%;
+  height: 100%;
+  position: relative;
+  right: 2px;
+}
+
+.top-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-shadow: 0 0 1px 0.001px;
+  overflow: hidden;
+}
+
+
+#menu {
+  position: relative;
+  left: 20px;
+  cursor: pointer;
+  border: none;
+  height: 20px;
+}
+
+ul {
+  list-style: none;
+  cursor: pointer;
+}
+
+li {
+  text-transform: uppercase;
+  color: var(--cor-secundaria);
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 10px;
+  padding-left: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+li:hover {
+  background: rgb(0, 0, 0, .15);
+  cursor: pointer;
+}
+
+.header {
+  background-color: var(--cor-primaria);
+  height: 10%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0;
+}
+
+.container-menu-name {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.icons-menu {
+  width: 18px;
+  margin-right: 10px;
+}
+
+.turma-nome {
+  position: relative;
+  left: 7%;
+  align-self: center;
+  color: #e8f1f2;
+  transition: left 0.8s;
+  top: 9px;
+}
+
+.container-pesquisa {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 90%;
+  right: 5%;
+}
+
+.pesquisa {
+  width: 50%;
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+}
+
+.pesquisa-campo {
+  width: 100%;
+  height: 100%;
+  border: 3px solid #ffffff;
+  border-right: none;
+  padding: 6.7px;
+  height: 10%;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.pesquisa-campo:focus {
+  color: #00B4CC;
+}
+
+.pesquisa-button {
+  width: 40px;
+  height: 38.5px;
+  border: 1px solid #00B4CC;
+  background-color: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* NAV */
+
+.tools-painel {
+  background-color: var(--cor-terciaria);
+  height: 80px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tools-painel-sala{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-left: 1.1%;
+}
+
+.config-sala {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.open-cadastro-aluno {
+  height: 30px;
+  margin: 10px;
+  padding: 5px;
+}
+.add-aluno{
+  position: relative;
+  bottom: 4px;
+  margin-right: 15px;
+}
+
+.alunos-nav {
+  padding: 0;
+  margin: 0;
+}
+
+/* Tabela*/
+
+.container-table {
+  background-color: aliceblue;
+  min-width: 100%;
+  min-height: 70%;
+  color: black;
+}
+
+.tabela-aluno {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  margin-bottom: auto;
+  width: 100%;
+}
+
+.tabela-aluno * {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid #bbb8b8;
+}
+
+.coluna-item {
+  background-color: rgb(79, 76, 76);
+  color: white;
+}
+
+tr:hover {
+  background-color: #dddddd;
+  cursor: pointer;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form * {
+  padding: 10px;
+  margin-inline: 10px;
+}
+
+.qtd-alunos {
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding: 0;
+  margin: 2px;
+}
