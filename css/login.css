@@ -9,86 +9,29 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     font-weight: bold;
+
 }
 
 body,
 html {
     width: 100%;
     height: 100%;
-}
-
-header {
-    width: 100%;
-    background-color: var(--cor-primaria);
-    height: 15%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-
-
-.nav-infos {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
-    position: relative;
-    right: 100px;
-}
-
-.nav-infos-unidade{
-    display: inline-block;
-    margin-right: 20px;
-}
-
-.a {
-    list-style: none;
-    text-decoration: none;
-    padding-inline: 3px;
-}
-
-.border-bottom-animation {
-    display: inline-block;
-    color: var(--cor-secundaria);
-    text-decoration: none;
-}
-
-.border-bottom-animation::after {
-    position: relative;
-    top: 4px;
-    content: "";
-    display: block;
-    width: 0;
-    height: 3px;
-    background: var(--cor-secundaria);
-    transition: width 1s;
-}
-
-.border-bottom-animation:hover::after {
-    width: 100%;
-    transition: width 1s;
-}
-
-
-.logo {
-    width: 30%;
-    height: 100%;
-    position: relative;
-    left: 10%;
-    cursor: pointer;
+    overflow: hidden;
 }
 
 /* ------------------ */
 
-.forget{
+.forget {
     text-decoration: none;
     color: #3b7978;
-    margin-bottom: 10px;
+    opacity: 50%;
+    font-size: 13px;
+    margin-bottom: 5px;
 }
 
 main {
     width: 100%;
-    height: 90%;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
@@ -96,10 +39,19 @@ main {
 .form {
     padding: 8px;
     border: 0;
-    border-bottom: 2px solid blue;
+    border: 1px solid rgb(217, 217, 218);
+    border-radius: 5px;
     margin-top: 10px;
+    outline: 0;
+    width: 70%;
+    font-style: oblique;
+    color: #4a4d4d;
+    transition: border 1s;
 }
 
+.form:focus {
+    border: 2px solid rgb(77, 77, 78);
+}
 
 
 .matricula {
@@ -112,27 +64,46 @@ main {
     outline: 0;
 }
 
-
 .text-login {
     color: #3a4e51;
     font-size: 30px;
+    position: relative;
+    bottom: 10%;
 }
 
-.button-entrar {
+.form-entrar {
     padding: 10px;
     background-color: #2dc2ac;
     border: none;
     border-radius: 10px;
     color: aliceblue;
     transition: 0, 5s;
-}
-
-.button-entrar * {
+    margin-block: 20px;
+    padding-block: 10px;
+    padding-inline: 15%;
     text-decoration: none;
-    color: aliceblue;
 }
 
-.button-entrar:hover {
+.form-entrar:hover {
+    background-color: #009694;
+    color: white;
+    cursor: pointer;
+}
+
+.form-slide {
+    box-sizing: border-box;
+    position: relative;
+    top: 15%;
+    padding: 10px;
+    background-color: #0b4940;
+    border: none;
+    border-radius: 10px;
+    color: aliceblue;
+    padding-block: 5px;
+    padding-inline: 5%;
+}
+
+.form-slide:hover {
     background-color: #009694;
     color: white;
     cursor: pointer;
@@ -140,20 +111,66 @@ main {
 
 .login {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-direction: column;
-    align-content: flex-start;
-    padding-left: 20%;
-    padding-bottom: 10%;
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 80%;
+    margin: auto auto;
+    align-items: center;
+    border: 1px solid rgb(219, 214, 214);
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 5%;
+    justify-content: center;
+}
+.form-login{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.apresentation-login {
-    background: rgb(255, 255, 255);
-    width: 100%;
-    margin-top: 8px;
-    overflow: hidden;
-    object-fit: cover;
+.block-login-style {
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    display: flex;
+    justify-content: center;
+}
+
+.slide-login {
+    left: 50%;
+    background: var(--cor-primaria);
+}
+
+.slide-left {
+    background: var(--cor-primaria);
+    animation: slide-left 2s ease-out;
+
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+
+}
+
+.logo-slide {
+    width: 40%;
+    position: relative;
+    bottom: 30%;
 }

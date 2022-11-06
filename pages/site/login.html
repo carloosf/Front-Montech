@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale-1.0">
+    <title>Login - Montech</title>
+    <link rel="icon" type="image/x-icon" href="/images/linkimage.png">
+
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+
+<body>
+    <main>
+        <div class="login login-responsavel">
+            <form action="/pages/responsavel/home-responsavel.html" class="form-login">
+                <h2 class="text-login">Login Responsável</h2>
+                <input class="matricula form" type="text" id="Matricula" placeholder="Número da matricula" maxlength="8"
+                    required>
+                <input class="psd form" type="password" id="senha" placeholder="Senha" required>
+
+                <input type="submit" class="form-entrar" value="Entrar">
+
+                <a class="forget" href="#">Recuperar os dados</a>
+            </form>
+            <button class="form-slide" id="professor-button" onclick="loginProfessor()">Sou professor</button>
+        </div>
+
+
+
+
+        <div class="login login-professor">
+            <form action="/pages/escola/home-instituicao.html" class="form-login"> 
+
+                <h2 class="text-login">Login Professor</h2>
+                <input class="matricula form" type="text" id="Matricula" placeholder="Número da matricula"
+                    maxlength="8">
+
+                <input class="psd form" type="password" id="senha" placeholder="Senha">
+
+                <input type="submit" class="form-entrar" value="Entrar">
+                <a class="forget" href="#">Recuperar os dados</a>
+            </form>
+            <button class="form-slide" id="aluno-button " onclick="loginAluno()">Sou Aluno</button>
+        </div>
+    </main>
+
+    <div class="slide-login block-login-style" id="slide-login">
+        <img src="/images/logo-montech-white.svg" alt="Logo-Montech" class="logo-slide">
+    </div>
+
+    <script src="/js/front/login.js"></script>
+</body>
+
+</html>
